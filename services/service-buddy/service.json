@@ -1,0 +1,14 @@
+{
+  "cli": {
+    "service-type": "cli",
+    "description": "Core codebase for the service-buddy commandline interface."
+  },
+  "code-template-pylib": {
+    "service-type": "code-template",
+    "description": "Cookiecutter template for a pylib python library."
+  },
+  "code-template-master": {
+    "service-type": "code-template",
+    "description": "Cookiecutter template for a master repository for a set of microservices managed by service-buddy."
+  }
+}

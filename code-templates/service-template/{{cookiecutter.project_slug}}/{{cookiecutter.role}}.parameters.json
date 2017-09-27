@@ -1,0 +1,24 @@
+[
+
+  {
+      "ParameterKey": "Environment",
+      "ParameterValue": "${ENVIRONMENT}"
+    },
+    {
+      "ParameterKey": "Application",
+      "ParameterValue": "${APPLICATION}"
+    },
+    {
+      "ParameterKey": "ShortApplicationName",
+      "ParameterValue": "${VPCAPP}"
+    },
+    {
+      "ParameterKey": "Role",
+      "ParameterValue": "${ROLE}"
+    },
+    {
+      "ParameterKey": "VPCStack",
+      "ParameterValue": "${VPC_STACK_NAME}"
+    }
+]
+

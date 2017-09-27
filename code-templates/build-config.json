@@ -1,0 +1,31 @@
+{
+  "provider": "travis",
+  "pypi_user":"alienvault_engineering",
+  "build-templates": {
+    "service-template": {
+      "type": "cloudformation-validate"
+    },
+    "service-modification-template": {
+      "type": "cloudformation-validate"
+    },
+    "code-template": {
+      "type": null
+    },
+    "cli": {
+      "type": "pylib"
+    }
+  },
+  "build-configuration": {
+    "cloudformation-validate": {
+      "language": "python",
+      "install": "pip install infra-buddy --upgrade",
+      "script": "infra-buddy validate-template --service-template-directory . --service-type {role}"
+    },
+    "pylib": {
+      "language": "python",
+      "install": "pip install pybuilder ",
+      "script": "pyb install_dependencies package -P build_number=0.1.${TRAVIS_BUILD_NUMBER}",
+      "pypi-deploy": true
+    }
+  }
+}

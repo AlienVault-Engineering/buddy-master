@@ -1,0 +1,42 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "{{cookiecutter.description}}",
+  "Parameters": {
+    "Environment": {
+      "Description": "The environment this stack is for.",
+      "Type": "String"
+    },
+    "Application": {
+      "Description": "The application this stack is for.",
+      "Type": "String"
+    },
+    "ShortApplicationName": {
+      "Description": "The vpc application name this stack is in.",
+      "Type": "String"
+    },
+    "Role": {
+      "Description": "The role this stack represents.",
+      "Type": "String"
+    },
+    "VPCStack": {
+      "Description": "The stack name of the vpc deployed by infra-buddy that this service will be deployed in.",
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "ExampleResource":{
+      "Type":"AWS::S3::Bucket"
+    }
+  },
+  "Outputs": {
+    "ExampleOutput": {
+      "Description": "The task name of the  contribution api",
+      "Value": "An Example export value for dependancy management.",
+      "Export": {
+        "Name": {
+          "Fn::Sub": "${AWS::StackName}-MyCustomExport"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "provider":"cookiecutter",
+  "code-template-definitions": {
+    "service-template": {
+      "type": "file",
+      "location": "./service-template"
+    },
+    "service-modification-template": {
+      "type": "file",
+      "location": "./service-template"
+    },
+    "code-template": {
+      "type": "file",
+      "location": "./code-template"
+    }
+  }
+}
